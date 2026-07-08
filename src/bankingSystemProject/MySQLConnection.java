@@ -9,8 +9,8 @@ import java.sql.SQLException;
 	void createDatabase() {
 		 
 		 String url = "jdbc:mysql://localhost:3306/";
-		 String uname ="root";
-		 String upass ="your_password";
+		 String uname ="your_Username";
+		 String upass ="your_Mysql_password";
 		 String query = "CREATE DATABASE IF NOT EXISTS banking_system";
 		 try(Connection con = DriverManager.getConnection(url,uname,upass);  
 				 PreparedStatement ps = con.prepareStatement(query); ){
@@ -25,8 +25,8 @@ import java.sql.SQLException;
 	
 	static Connection getConnection() throws ClassNotFoundException, SQLException{
 		String url = "jdbc:mysql://localhost:3306/banking_system";
-		String uname ="root";
-		String upass = "saniroot@2005";
+		String uname ="your-userName";
+		String upass = "your_Mysql_password";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		return 
 		DriverManager.getConnection(url,uname,upass);
